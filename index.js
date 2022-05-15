@@ -5,7 +5,7 @@ total=dato-num;
 
 
  if (isNaN(dato)) {
-    alert('Ud. Ingreso un valor invalido / APP NandoScript')
+    alert('Ud. Ingreso un dato invalido / APP NandoScript')
  }    
 
 
