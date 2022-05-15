@@ -1,5 +1,5 @@
 let dato, num, total;
-dato=+prompt('Ingrese el valor que cobró al cliente. Valor Neto de la boleta.')
+dato=+prompt('Ingrese el valor que cobró al cliente -Sin puntos ni comas-. Valor Neto de la boleta.')
 num=.1225*dato;
 total=dato-num;
 
