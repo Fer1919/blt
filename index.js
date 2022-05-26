@@ -1020,7 +1020,7 @@ if(dificultad==3){
 		}
 	}
 }
-*/
+
 
 let aleatorio=Math.floor(Math.random()*10)+1;
 let select_dificultad=prompt('Escoja el nivel de dificultad del juego. 1, 2 o 3');
@@ -1094,3 +1094,160 @@ if(dificultad==3){
 		}
 	}
 }
+//******************************************************************************
+ 
+// let max=100,min=50;
+// alert(Math.floor(Math.random()*(max-min))+min);
+
+//let aleatorio=Math.floor(Math.random()*10)+1;
+//let select_dificultad=prompt('Escoja el nivel de dificultad del juego. 1, 2 o 3');
+
+
+let opcionMaquina = cachipum(0,2);
+function cachipum(minimo, maximo)
+{
+    var numero = Math.floor( Math.random() * (maximo - minimo + 1) + minimo );
+    return numero;
+}
+
+let opcionUsuario = prompt("¿Qué eliges?\nPiedr: 0\nPape: 1\nTijer: 2", 0);
+
+let opciones = ["Piedr", "Pape", "Tijer"];
+
+ alert("Elegiste " + opciones[opcionUsuario]);
+alert("Javascript eligió " + opciones[opcionMaquina]);
+
+let piedr = 0;
+let pape = 1;
+let tijer = 2;
+
+if(opcionUsuario == piedra)
+{
+    if(opcionMaquina == piedra)
+    {
+        alert("Empate!");
+    }
+    else if(opcionMaquina == papel)
+    {
+        alert("Perdiste Fer :( ");
+    }
+    else if(opcionMaquina == tijera)
+    {
+        alert("Ganaste Fer!");
+    }
+}
+else if(opcionUsuario == papel)
+{
+    if(opcionMaquina == piedra)
+    {
+        alert("Ganaste Fer!");
+    }
+    else if(opcionMaquina == papel)
+    {
+        alert("Empate buuuu!");
+    }
+    else if(opcionMaquina == tijera)
+    {
+        alert("Perdiste Fer!");
+    }
+}
+else if(opcionUsuario == tijera)
+{
+    if(opcionMaquina == piedra)
+    {
+        alert("Perdiste Fer CTM!");
+    }
+    else if(opcionMaquina == papel)
+    {
+        alert("Ganaste Fer!");
+    }
+    else if(opcionMaquina == tijera)
+    {
+        alert("Empate buuuu!");
+    }
+}
+else
+{
+    alert("¿WHT Fk?");
+}
+
+
+
+
+// let max=100,min=50;
+//  alert(Math.floor(Math.random()*(max-min))+min);
+
+*/
+let aleatorio=Math.floor(Math.random()*10)+1;
+let select_dificultad=prompt('Ingrese un nivel de dificultad. 1_facil, 2_Intermedio y 3_Dificil');
+
+let aciertos=false;
+let dificultad=0;
+let intentos=0;
+
+if(select_dificultad==1){
+	dificultad=1;
+}
+if(select_dificultad==2){
+	dificultad=2;
+}
+if(select_dificultad==3){
+	dificultad=3;
+}
+
+if(dificultad==1){
+	alert('Escogiste el nivel 1, no tienes limite de intentos.')
+	while(aciertos==false){
+		let entrada=prompt('Ingrese un numero del 1 al 10');
+		intentos++;
+		if(entrada==aleatorio){
+			aciertos=true;
+			alert('Ganaste!!!!!!!!!!')
+			alert(`Le acertaste al numero ${entrada}, en ${intentos} intento(s). `)
+			alert('Refresca la pagina para seguir jugando. APP_Nando_Script')
+		}
+		else{
+			alert('Sigue Intentandolo.')
+		}
+
+	}
+}
+if(dificultad==2){
+	alert('Escogoste el nivel 2, tienes 5 intentos');
+	while(aciertos==false&&intentos<5){
+		let entrada=prompt('Ingrese un numero del 1 al 10.')
+			intentos++;
+			if(entrada==aleatorio){
+				aciertos=true;
+				alert(`Bien, le acertaste al numero ${entrada} en  ${intentos} intento(s). !!!!`)
+				alert('Refresca la pagina para seguir jugando. APP_Nando_Script');
+			}
+			else{
+				alert('Sigue intentandolo.')
+			}
+			if(intentos==5){
+				alert('GAME_OVER_KO.');
+				alert('Refresca la pagina para seguir jugando. APP_Nando_Script');
+			}
+		}
+	}
+	if(dificultad==3){
+		alert('Escogiste el nivel 3, es el mas dificil, solo tienes 3 intentos.');
+		while(aciertos==false&&intentos<3){
+			let entrada=prompt('Ingrese un numero del 1 al 10.');
+			intentos++;
+			if(entrada==aleatorio){
+				aciertos=true;
+				alert(`Bien, le acertaste al numero ${entrada} en  ${intentos} intento(s). !!!!`);
+                alert('Refresca la pagina para seguir jugando.');
+			}
+			else{
+				alert('Sigue intentandolo.');			
+			}
+			if(intentos==3){
+				alert('GAME_OVER_KO. APP_Nando_Script.');
+				alert('Refresca la pagina para seguir jugando.');
+			}
+		}
+
+	}
